@@ -4,13 +4,14 @@ $( document ).ready(function() {
     $("#currentDay").text(moment().format("MMM DD YYYY HH:mm:ss a"));
 
     $(".saveBtn").on("click", function() {
-        var time = $(this).parent().attr("id");
         var task = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
+        
         console.log(this);
 
-        localStorage.setItem(task, time);
+        localStorage.setItem(time, task);
     });
-    
+
     // load stored data from localStorage
     $("#time-07 .description").val(localStorage.getItem("time-07"));
     $("#time-08 .description").val(localStorage.getItem("time-08"));
@@ -34,7 +35,7 @@ $( document ).ready(function() {
         // loop through time blocks
         $(".time-block").each(function() {
             var timeBlockHour = parseInt($(this).attr("id").split("time-")[1]);
-            console.log(timeBlockHour, currentTime);
+            // console.log(timeBlockHour, currentTime);
 
             // check if time block is a past, present, or future time
             if (timeBlockHour < currentTime) {
@@ -54,6 +55,7 @@ $( document ).ready(function() {
         });
     };
     timeTrack();
+
 });
 
 
