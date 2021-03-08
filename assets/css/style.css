@@ -9,8 +9,9 @@ textarea{
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
+  /* border-left: 1px solid black; */
   padding: 10px;
+  border: 1px dashed #000000;
 }
 
 .jumbotron {
@@ -30,8 +31,12 @@ textarea{
   border-radius: 15px;
 }
 
+/* #time {
+  font-weight: 200;
+} */
+
 .row {
-  white-space: pre-wrap;
+  /* white-space: pre-wrap; */
   height: 80px;
   border-top: 1px solid white;;
 }
@@ -58,10 +63,12 @@ textarea{
 }
 
 .saveBtn {
+  /* width: 8%;
+  float: right; */
   border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  border-top-right-radius: 05px;
+  border-bottom-right-radius: 05px;
+  background-color: #773efb;
   color: white;
 }
 

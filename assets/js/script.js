@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 
     // add date and time to hero
     $("#currentDay").text(moment().format("MMM DD YYYY HH:mm:ss a"));
@@ -57,6 +57,3 @@ $( document ).ready(function() {
     timeTrack();
 
 });
-
-
-
